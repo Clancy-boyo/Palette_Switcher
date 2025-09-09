@@ -24,6 +24,8 @@ def main () :
     
     try :
         imagedir = os.listdir("INPUT")
+        
+        print(imagedir)
     except:
         print("Missing 'INPUT' folder.") 
         return 
@@ -34,6 +36,8 @@ def main () :
 
     for n in range(0, len(imagedir)) :
         try :
+            if imagedir[n] == ".gitignore" :
+                continue
             iimage = Image.open(f"INPUT\\{imagedir[n]}")
         except :
             print(f"Something went wrong! Image '{imagedir[n]}' produced an error while opening.")
