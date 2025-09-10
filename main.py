@@ -47,7 +47,7 @@ def main () :
         red, green, blue = data[:,:,0], data[:,:,1], data[:,:,2]    
         
         try :
-            f = open("INPUTHEX\palette1.txt")  
+            f = open("INPUTHEX\\palette1.txt")  
         except:
             print("Missing 'palette1.txt' in 'INPUTHEX' folder.") 
             return 
@@ -68,7 +68,7 @@ def main () :
                 return
         
         try :
-            f = open("OUTPUTHEX\palette2.txt")  
+            f = open("OUTPUTHEX\\palette2.txt")  
         except:
             print("Missing 'palette2.txt' in 'OUTPUTHEX' folder.") 
             return
@@ -110,7 +110,7 @@ def main () :
 
         
         try :
-            iimage.save(f'OUTPUT\{imagedir[n]}')
+            iimage.save(f'OUTPUT\\{imagedir[n]}')
         except:
             print("Missing 'OUTPUT' folder.") 
             return 
